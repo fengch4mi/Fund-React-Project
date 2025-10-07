@@ -1,0 +1,457 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'HostGrotesk';
+  src: url('./assets/HostGrotesk[wght].ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+}
+
+body {
+  font-family: 'HostGrotesk', system-ui, -apple-system, sans-serif;
+  background-color: #A6B28B;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-x: auto;
+}
+
+.app-header {
+  background-color: #1C352D;
+  color: white;
+  padding: 20px 5%;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 56px;
+}
+
+.search-section {
+  background-color: #F9F5F0;
+  padding: 10px 2%;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #1C352D;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: #344F1F;
+  box-shadow: 0 0 0 2px rgba(52, 79, 31, 0.2);
+}
+
+/* Improve nav link hit area and cursor */
+.nav-inner a,
+.nav-inner button {
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  align-items: flex-start;
+}
+
+header,
+footer {
+  background-color: #1C352D;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header .header-container {
+  max-width: none;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+.portfolio-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.header-title {
+  font-size: 48px;
+  margin-top: 6px;
+}
+
+main {
+  display: flex;
+  gap: 24px;
+  padding: 20px 12px;
+  width: 1800px;
+  max-width: none;
+  flex: 1;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.main-inner {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: none; 
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#content {
+  flex: 1 1 auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.active-notes,
+.archived-notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.note {
+  width: 100%; 
+}
+
+article.portfolio-card {
+  background-color: #F9F6F3;
+  border: 1px solid #ddd;
+  border-radius: 6px; 
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  margin: 0; 
+}
+
+aside {
+  flex: 0 0 320px;
+  background-color: #F5C9B0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+  position: sticky;
+  top: 20px;
+}
+
+footer {
+  background-color: #1C352D;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.notes-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.note {
+  background-color: #F2EAD3;
+  border: 1px solid #344F1F;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.notes-sidebar {
+  flex: 1;
+  background-color: #F5C9B0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+  position: sticky;
+  top: 20px;
+}
+
+.note-form {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #C9CDCF;
+  background-color: #F9F5F0;
+  border-radius: 4px;
+}
+
+button {
+  background: #1C352D;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #ED3F27;
+}
+
+.button-link {
+  display: inline-block;
+  background: #1C352D;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .notes-section,
+  .notes-sidebar {
+    flex: 1;
+  }
+}
+
+/* Stats component styles */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.stats .stats-toggle {
+  background: #1C352D;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.stats .stats-body {
+  background: rgba(255,255,255,0.6);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.stats .stats-body p {
+  margin: 0;
+  padding: 6px 0;
+}
+
+@media (max-width: 900px) {
+  .stats .stats-toggle {
+    display: block;
+  }
+}
+
+/* Dark theme overrides applied when <body class="dark"> is set by ThemeContext */
+body.dark {
+  background-color: #121212;
+  color: #e6e6e6;
+}
+
+/* smooth transitions for theme colors */
+body,
+body * {
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+}
+
+body.dark header,
+body.dark footer {
+  background-color: #0b2830; /* darker teal shade */
+  color: #fff;
+}
+
+body.dark .search-section,
+body.dark article.portfolio-card,
+body.dark .notes-sidebar,
+body.dark aside {
+  background-color: #121616;
+  color: #eaeaea;
+  border-color: #273236;
+}
+
+body.dark .note {
+  background-color: #111315;
+  color: #e6e6e6;
+  border-color: #273236;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #151617;
+  color: #eaeaea;
+  border-color: #273236;
+}
+
+body.dark button,
+body.dark .button-link {
+  background: #0b2830;
+  color: #fff;
+}
+
+/* replace green accents (borders, highlights) with teal/darker tones */
+body.dark .search-container input {
+  border-color: #2f5254;
+}
+
+body.dark .button-link:hover,
+body.dark button:hover {
+  background: #174e50;
+}
+
+body.dark .header-title,
+body.dark .portfolio-subtitle {
+  color: #e8f6f5;
+}
+
+/* Theme toggle animation */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 240ms ease;
+}
+
+.theme-toggle:active {
+  transform: scale(0.92);
+}
+
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), transparent 40%);
+  opacity: 0;
+  transition: opacity 220ms ease, transform 220ms ease;
+  transform: scale(0.8);
+}
+
+/* show subtle glow on hover */
+.theme-toggle:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Header avatar */
+.header-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eee;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Spinner */
+.header-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 800ms linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Top progress bar for loading */
+.top-progress {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.9), rgba(255,255,255,0.12));
+  background-size: 200% 100%;
+  animation: progress 900ms linear infinite;
+}
+
+@keyframes progress {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Skeleton placeholders for notes */
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+.skeleton-card {
+  height: 160px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #eee, #ddd, #eee);
+  background-size: 200% 100%;
+  animation: shimmer 1200ms linear infinite;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+body.dark .skeleton-card {
+  background: linear-gradient(90deg, #151617, #1b1c1d, #151617);
+}
